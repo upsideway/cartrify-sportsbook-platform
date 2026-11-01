@@ -79,8 +79,9 @@ with escrow terms — not a repository.
 
 - [`docs/integration-guide.md`](docs/integration-guide.md) — what an operator actually needs in
   place to go live: licence, payment rails, odds feed, KYC/AML, agent network.
-- [`demo/index.html`](demo/index.html) — a static UI preview of the betting interface. Sample
-  fixtures, no live data, no backend.
+- [`index.html`](index.html) — a static UI preview of the betting interface, published at
+  **https://upsideway.github.io/cartrify-sportsbook-platform/** . Sample fixtures, no live data, no
+  backend.
 - [`assets/`](assets) — screenshots of the production platform.
 
 ---

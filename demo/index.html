@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartrify — betting interface preview</title>
+<style>
+  :root { --bg:#0d1117; --panel:#161c24; --line:#232c37; --text:#e8eef5; --dim:#8b98a8;
+          --accent:#0fb56b; --accent2:#12946a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:14px; }
+  .cta { background:linear-gradient(90deg,#0f4c3a,#12946a); padding:9px 16px; text-align:center;
+         font-size:13px; }
+  .cta a { color:#fff; font-weight:600; }
+  header { display:flex; align-items:center; justify-content:space-between; padding:14px 18px;
+           border-bottom:1px solid var(--line); }
+  .logo { font-weight:700; letter-spacing:.5px; font-size:17px; }
+  .logo span { color:var(--accent); }
+  .badge { font-size:11px; color:var(--dim); border:1px solid var(--line); border-radius:20px;
+           padding:4px 10px; }
+  .wrap { display:grid; grid-template-columns:1fr 300px; gap:16px; padding:16px; max-width:1080px;
+          margin:0 auto; }
+  .tabs { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .tab { padding:7px 13px; border-radius:8px; background:var(--panel); border:1px solid var(--line);
+         cursor:pointer; font-size:13px; color:var(--dim); }
+  .tab.on { color:#fff; border-color:var(--accent2); background:#12261e; }
+  .league { font-size:11px; text-transform:uppercase; letter-spacing:.8px; color:var(--dim);
+            margin:14px 0 6px; }
+  .match { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+           padding:11px 12px; margin-bottom:8px; }
+  .teams { display:flex; justify-content:space-between; align-items:center; margin-bottom:9px; }
+  .teams .time { font-size:11px; color:var(--dim); }
+  .odds { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+  button.odd { background:#1d2632; border:1px solid var(--line); color:var(--text); border-radius:7px;
+               padding:8px 6px; cursor:pointer; font-size:13px; display:flex;
+               justify-content:space-between; }
+  button.odd:hover { border-color:var(--accent2); }
+  button.odd.sel { background:#12261e; border-color:var(--accent); }
+  button.odd i { color:var(--dim); font-style:normal; font-size:12px; }
+  aside { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:13px;
+          height:fit-content; position:sticky; top:14px; }
+  aside h3 { margin:0 0 10px; font-size:13px; text-transform:uppercase; letter-spacing:.8px;
+             color:var(--dim); }
+  .slip { font-size:13px; color:var(--dim); }
+  .pick { border-bottom:1px solid var(--line); padding:8px 0; }
+  .pick b { color:var(--text); display:block; font-weight:600; }
+  .pick small { color:var(--dim); }
+  .place { width:100%; margin-top:12px; background:var(--accent); color:#06120c; border:0;
+           border-radius:8px; padding:11px; font-weight:700; cursor:pointer; }
+  .place:disabled { background:#2a3340; color:#6b7684; cursor:not-allowed; }
+  footer { max-width:1080px; margin:6px auto 26px; padding:0 16px; font-size:12px; color:var(--dim);
+           line-height:1.6; }
+  footer a { color:var(--accent); }
+  @media (max-width:820px){ .wrap { grid-template-columns:1fr; } aside { position:static; } }
+</style>
+</head>
+<body>
+<div class="cta">Interface preview with sample data — the live platform runs <strong>NaijaBet</strong> today.
+  <a href="https://cartrify.com/contact">Talk to us →</a></div>
+
+<header>
+  <div class="logo">CART<span>RIFY</span></div>
+  <div class="badge">Preview build · no live odds</div>
+</header>
+
+<div class="wrap">
+  <main>
+    <div class="tabs">
+      <div class="tab on" data-sport="football">Football</div>
+      <div class="tab" data-sport="basketball">Basketball</div>
+      <div class="tab" data-sport="tennis">Tennis</div>
+    </div>
+    <div id="board"></div>
+  </main>
+
+  <aside>
+    <h3>Bet slip</h3>
+    <div id="slip" class="slip">No selections yet.</div>
+    <button class="place" id="place" disabled>Place bet</button>
+  </aside>
+</div>
+
+<footer>
+  Sample fixtures and prices, published to show the interface only. Nothing here is a live market and
+  no bet can be placed. The production platform — with real odds, cash out, bet builder, booking
+  codes, agent network and settlements — is licensed white-label from Cartrify, the platform behind
+  NaijaBet. <a href="https://cartrify.com">cartrify.com</a> · info@cartrify.com
+</footer>
+
+<script>
+const DATA = {
+  football: { league: "Premier League · England", games: [
+    { time: "Sat 17:30", home: "Arsenal", away: "Chelsea", o: ["2.10","3.40","3.60"] },
+    { time: "Sat 20:00", home: "Liverpool", away: "Newcastle", o: ["1.75","3.80","4.50"] },
+    { time: "Sun 16:00", home: "Man City", away: "Aston Villa", o: ["1.42","4.60","6.50"] }
+  ]},
+  basketball: { league: "NBA", games: [
+    { time: "Tonight 01:00", home: "Boston Celtics", away: "Miami Heat", o: ["1.55","2.45","—"] },
+    { time: "Tonight 03:30", home: "LA Lakers", away: "Denver Nuggets", o: ["2.05","1.80","—"] }
+  ]},
+  tennis: { league: "ATP Masters · Paris", games: [
+    { time: "Today 14:00", home: "C. Alcaraz", away: "J. Sinner", o: ["1.90","1.90","—"] },
+    { time: "Today 19:00", home: "N. Djokovic", away: "A. Zverev", o: ["1.65","2.25","—"] }
+  ]}
+};
+const NAMES = ["1", "X", "2"];
+let sport = "football";
+const picks = [];
+
+function render() {
+  const d = DATA[sport];
+  let html = '<div class="league">' + d.league + '</div>';
+  d.games.forEach((g, gi) => {
+    html += '<div class="match"><div class="teams"><div><strong>' + g.home + '</strong> vs <strong>' +
+            g.away + '</strong></div><div class="time">' + g.time + '</div></div><div class="odds">';
+    g.o.forEach((price, oi) => {
+      if (price === "—") { html += '<button class="odd" disabled><span>—</span></button>'; return; }
+      const key = sport + "|" + gi + "|" + oi;
+      const sel = picks.some(p => p.key === key) ? " sel" : "";
+      html += '<button class="odd' + sel + '" data-key="' + key + '" data-label="' + g.home + " v " +
+              g.away + '" data-pick="' + NAMES[oi] + '" data-price="' + price +
+              '"><i>' + NAMES[oi] + '</i><span>' + price + '</span></button>';
+    });
+    html += '</div></div>';
+  });
+  document.getElementById("board").innerHTML = html;
+  document.querySelectorAll("button.odd[data-key]").forEach(b => {
+    b.onclick = () => {
+      const k = b.dataset.key, i = picks.findIndex(p => p.key === k);
+      if (i > -1) picks.splice(i, 1);
+      else picks.push({ key: k, label: b.dataset.label, pick: b.dataset.pick, price: b.dataset.price });
+      render(); renderSlip();
+    };
+  });
+}
+
+function renderSlip() {
+  const el = document.getElementById("slip"), btn = document.getElementById("place");
+  if (!picks.length) { el.textContent = "No selections yet."; btn.disabled = true; btn.textContent = "Place bet"; return; }
+  el.innerHTML = picks.map(p => '<div class="pick"><b>' + p.label + '</b><small>' + p.pick +
+    " @ " + p.price + '</small></div>').join("");
+  const total = picks.reduce((a, p) => a * parseFloat(p.price), 1);
+  btn.disabled = false;
+  btn.textContent = "Place bet · " + total.toFixed(2);
+}
+
+document.querySelectorAll(".tab").forEach(t => {
+  t.onclick = () => {
+    document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
+    t.classList.add("on"); sport = t.dataset.sport; render(); renderSlip();
+  };
+});
+render(); renderSlip();
+</script>
+</body>
+</html>

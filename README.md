@@ -3,7 +3,7 @@
 **White-label sportsbook infrastructure for licensed operators in Africa. Live in three weeks.
 Fixed monthly fee. No revenue share — the operator keeps 100% of GGR.**
 
-[cartrify.com](https://cartrify.com) · [info@cartrify.com](mailto:info@cartrify.com) · +1 (973) 671-8622
+[cartrify.com](https://cartrify.com/?utm_source=github&utm_medium=repo&utm_campaign=sportsbook_platform) · [info@cartrify.com](mailto:info@cartrify.com) · +1 (973) 671-8622
 
 ![Cartrify sportsbook — live production platform](assets/sportsbook.png)
 
@@ -89,7 +89,7 @@ with escrow terms — not a repository.
 ## Talk to us
 
 Email **[info@cartrify.com](mailto:info@cartrify.com)** or use the form at
-[cartrify.com/contact](https://cartrify.com/contact).
+[cartrify.com/contact](https://cartrify.com/contact?utm_source=github&utm_medium=repo&utm_campaign=sportsbook_platform).
 
 Tell us three things and we will tell you honestly whether we fit:
 

@@ -38,10 +38,11 @@ show a demo. This one has a profit-and-loss statement.
 
 ## Commercials, in one paragraph
 
-A **fixed monthly licence fee, quoted in USD**, paid monthly for the life of the contract.
-**No revenue share, ever.** The fee does not rise as your book grows, which is the entire point:
-on a percentage model the platform earns more every time you succeed at acquisition. Setup is
-quoted per deployment — brand, domain, integrations, data migration — before any work starts.
+A **fixed monthly licence fee from $3,700 USD**, paid monthly for the life of the contract and
+billed in your local currency. **No revenue share, ever.** The fee does not rise as your book grows,
+which is the entire point: on a percentage model the platform earns more every time you succeed at
+acquisition. Setup is quoted per deployment — brand, domain, integrations, data migration — before
+any work starts.
 
 Commercial terms are given in writing, per operator, after a short call. If your platform currently
 takes a share of GGR, the arithmetic is worth doing on your own numbers before anything else: send

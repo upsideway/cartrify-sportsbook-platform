@@ -37,7 +37,7 @@ This is where launches fail. Before go-live you need, for every rail you intend 
 - **Reconciliation** — one report per rail per day that ties gateway settlement to your ledger. If
   you cannot reconcile, you cannot audit, and you cannot scale.
 
-Typical African rails: M-Pesa, MTN MoMo, Airtel Money, Paystack, OPay, Budpay, Moniepoint,
+Rails that matter in African markets, as an example: M-Pesa, MTN MoMo, Airtel Money, Paystack, OPay, Budpay, Moniepoint,
 Palmpay, Flutterwave, plus bank transfer and USDT.
 
 ---
@@ -88,5 +88,5 @@ Palmpay, Flutterwave, plus bank transfer and USDT.
 
 **info@cartrify.com** · [cartrify.com](https://cartrify.com)
 
-Cartrify is the white-label sportsbook platform behind NaijaBet. Fixed monthly fee, no revenue
-share, live in three weeks.
+Cartrify is the white-label sportsbook platform behind NaijaBet. A fixed monthly licence fee in
+USD, no revenue share, live in three weeks.

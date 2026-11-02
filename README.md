@@ -1,7 +1,7 @@
 # Cartrify — the sportsbook platform behind NaijaBet
 
-**White-label sportsbook infrastructure for licensed operators in Africa. Live in three weeks.
-Fixed monthly fee. No revenue share — the operator keeps 100% of GGR.**
+**White-label sportsbook infrastructure for licensed operators. Live in three weeks.
+Fixed monthly licence fee in USD. No revenue share — the operator keeps 100% of GGR.**
 
 [cartrify.com](https://cartrify.com/?utm_source=github&utm_medium=repo&utm_campaign=sportsbook_platform) · [info@cartrify.com](mailto:info@cartrify.com) · +1 (973) 671-8622
 
@@ -15,7 +15,7 @@ Fixed monthly fee. No revenue share — the operator keeps 100% of GGR.**
 
 ## It is already running a real book
 
-The platform powers **NaijaBet**, a licensed Nigerian sportsbook operating today: real players,
+The platform powers **NaijaBet**, a licensed sportsbook operating in production today: real players,
 real deposits, real settlement, mobile-money rails, agent network, and a regulator watching.
 
 That is the difference worth checking before you sign with anyone. Most platforms in this market
@@ -26,25 +26,26 @@ show a demo. This one has a profit-and-loss statement.
 | **Sports** | Football, basketball, tennis, table tennis, MMA/UFC, esports, and more |
 | **Markets** | Pre-match and live, cash out, bet builder, booking codes, special bets you create yourself |
 | **Odds** | Your choice of feed — LSports, SportsRadar, Betradar, Kambi — or our compilation add-on |
-| **Payments** | M-Pesa, MTN MoMo, Airtel Money, Paystack, OPay, Budpay, Moniepoint, Palmpay; a new gateway in 24 hours |
+| **Payments** | Mobile money (M-Pesa, MTN MoMo, Airtel Money), cards, bank transfer, crypto (USDT/BTC/ETH), plus Paystack, OPay, Budpay, Moniepoint and Palmpay. A new gateway goes live in 24 hours |
 | **Agents** | Agent and cashier network, float management, per-agent dashboard |
 | **Players** | KYC states, limits and risk controls, wallet and ledger, full audit trail |
-| **Casino** | Provably fair games, plus Africa-themed titles built for this market |
+| **Casino** | Provably fair games, plus locally themed titles built for the market you launch in |
 | **AI operations** | Analytics, retention, engagement and support agents — bring your own model key if you prefer |
-| **Compliance** | Licensing support and multi-jurisdiction regulatory reporting |
+| **Compliance** | Licensing support and multi-jurisdiction regulatory reporting, in the format the regulator asks for |
 | **Brand** | Your domain, your UI. Premium domains available (malibet.com, ghanabet.com and others) |
 
 ---
 
 ## Commercials, in one paragraph
 
-A **fixed monthly fee from ₦5M**, priced in your local currency or paid in USDT/BTC/ETH/USDC.
+A **fixed monthly licence fee, quoted in USD**, paid monthly for the life of the contract.
 **No revenue share, ever.** The fee does not rise as your book grows, which is the entire point:
 on a percentage model the platform earns more every time you succeed at acquisition. Setup is
 quoted per deployment — brand, domain, integrations, data migration — before any work starts.
 
-If your platform currently takes a share of GGR, the arithmetic is worth doing on your own numbers
-before anything else: send us three months of GGR and we will put it in writing.
+Commercial terms are given in writing, per operator, after a short call. If your platform currently
+takes a share of GGR, the arithmetic is worth doing on your own numbers before anything else: send
+us three months of GGR and we will put it in writing.
 
 ---
 
@@ -97,7 +98,7 @@ Tell us three things and we will tell you honestly whether we fit:
 2. Current setup — own platform, white-label, or not launched yet.
 3. Monthly GGR and your target go-live date.
 
-Cartrify is operated by **Kreativ Management Inc.** · 55 Madison Ave, Morristown, New Jersey ·
-Malta · Lagos, Nigeria.
+Cartrify is operated by **Kreativ Management Inc.** · 44 Washington Street, Morristown,
+New Jersey · Malta.
 
 *No source code is published in this repository. Content and screenshots © Kreativ Management Inc.*
